@@ -18,7 +18,7 @@ def get_publications():
     URL = "https://ivu.di.uniba.it/projects/serene"
 
     res = requests.get(URL)
-    page = BeautifulSoup(res.text, "html.parser")
+    page = BeautifulSoup(res.content, "html.parser", from_encoding='UTF-8')
     target = page.find('h2',string='Publications')
     content = []
     for sib in target.find_next_siblings():
