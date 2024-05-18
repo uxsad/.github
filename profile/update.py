@@ -15,7 +15,7 @@ def setup_args():
 
 
 def get_publications():
-    URL = "https://ivu.di.uniba.it/projects/serene"
+    URL = "https://ivu.di.uniba.it/projects/serene.html"
 
     res = requests.get(URL)
     page = BeautifulSoup(res.content, "html.parser", from_encoding='UTF-8')
